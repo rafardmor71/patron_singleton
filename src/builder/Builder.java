@@ -1,13 +1,13 @@
 package builder;
 
 public class Builder {
-    PersonaBuilder persona;
-
+    PersonaBuilder persona = new PersonaBuilder();
+    public void crearPersona(String nombre, String apellidos, int edad){
+        persona.setNombre(nombre);
+        persona.setApellidos(apellidos);
+        persona.setEdad(edad);
+    }
     public PersonaBuilder getPersona(){
         return persona;
-    }
-
-    public void crearPersona(String nombre, String apellidos, int edad){
-        persona = new PersonaBuilder(nombre, apellidos, edad);
     }
 }
